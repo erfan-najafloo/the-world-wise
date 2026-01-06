@@ -2,7 +2,7 @@ import AppNav from "../components/AppNav";
 
 function HomePage() {
   return (
-    <div className="h-[calc(100vh-5rem)] bg-hero-overlay bg-cover bg-center m-9 py-9 px-20 ">
+    <main className="h-[calc(100vh-5rem)] bg-hero-overlay bg-cover bg-center m-10 py-10 px-20 ">
       <AppNav />
       <section className="flex flex-col h-[85%] items-center justify-center gap-10 text-center">
         <h1 className="text-7xl leading-[1.3]">
@@ -20,7 +20,7 @@ function HomePage() {
         </h2>
         <a className="cta">start tracking now</a>
       </section>
-    </div>
+    </main>
   );
 }
 
