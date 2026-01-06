@@ -3,7 +3,7 @@ import SideBar from "../components/SideBar";
 
 function AppLayout() {
   return (
-    <div className="flex h-screen p-[2.4rem] overscroll-y-none realative ">
+    <div className="flex h-screen p-[2.4rem] overscroll-y-none relative ">
       <SideBar />
       <Map />
     </div>
