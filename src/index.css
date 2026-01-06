@@ -3,101 +3,132 @@
 @import "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap";
 
 @layer base {
-    :root {
-        --color-brand--1: #ffb545;
-        --color-brand--2: #00c46a;
+  :root {
+    --color-brand--1: #ffb545;
+    --color-brand--2: #00c46a;
 
-        --color-dark--0: #242a2e;
-        --color-dark--1: #2d3439;
-        --color-dark--2: #42484d;
-        --color-light--1: #aaa;
-        --color-light--2: #ececec;
-        --color-light--3: #d6dee0;
-    }
+    --color-dark--0: #242a2e;
+    --color-dark--1: #2d3439;
+    --color-dark--2: #42484d;
+    --color-light--1: #aaa;
+    --color-light--2: #ececec;
+    --color-light--3: #d6dee0;
+  }
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: inherit;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
 
-    html {
-        font-size: 62.5%;
-        box-sizing: border-box;
-    }
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
 
-    body {
-        font-family: "Manrope", sans-serif;
-        color: var(--color-light--2);
-        font-weight: 400;
-        line-height: 1.6;
-    }
+  body {
+    font-family: "Manrope", sans-serif;
+    color: var(--color-light--2);
+    font-weight: 400;
+    line-height: 1.6;
+  }
 
-    label {
-        font-size: 1.6rem;
-        font-weight: 600;
-    }
+  label {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
 
-    input,
-    textarea {
-        width: 100%;
-        padding: 0.8rem 1.2rem;
-        font-family: inherit;
-        font-size: 1.6rem;
-        border: none;
-        border-radius: 5px;
-        color: var(--color-dark--1);
-        background-color: var(--color-light--3);
-        transition: all 0.2s;
-    }
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    font-family: inherit;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 5px;
+    color: var(--color-dark--1);
+    background-color: var(--color-light--3);
+    transition: all 0.2s;
+  }
 
-    input:focus {
-        outline: none;
-        background-color: #fff;
-    }
+  input:focus {
+    outline: none;
+    background-color: #fff;
+  }
 }
-
 
 @layer components {
+  .cta {
+    display: inline-block;
+    background-color: var(--color-brand--2);
+    color: var(--color-dark--1);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+  }
 
-    .cta {
-        display: inline-block;
-        background-color: var(--color-brand--2);
-        color: var(--color-dark--1);
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: 1.6rem;
-        font-weight: 600;
-        padding: 1rem 3rem;
-        border-radius: 5px;
-    }
+  .ctaLink {
+    background-color: var(--color-brand--2);
+    color: var(--color-dark--0);
+    padding: 0.8rem 1.5rem;
+    border-radius: 7px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
 
-    .ctaLink {
-        background-color: var(--color-brand--2);
-        color: var(--color-dark--0);
-        padding: 0.8rem 1.5rem;
-        border-radius: 7px;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: 1.4rem;
-        font-weight: 600;
-    }
+  .pageNavLink {
+    color: var(--color-light--2);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .appNavLink {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+  }
+  .leaflet-popup .leaflet-popup-content-wrapper {
+    background-color: var(--color-dark--1);
+    color: var(--color-light--2);
+    border-radius: 5px;
+    padding-right: 0.6rem;
+  }
 
-    .navLink {
-        color: var(--color-light--2);
-        text-transform: uppercase;
-        font-size: 1.4rem;
-        font-weight: 600;
-    }
+  .leaflet-popup .leaflet-popup-content {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .leaflet-popup .leaflet-popup-content span:first-child {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .leaflet-popup .leaflet-popup-tip {
+    background-color: var(--color-dark--1);
+  }
+
+  .leaflet-popup-content-wrapper {
+    border-left: 5px solid var(--color-brand--2);
+  }
 }
 
-
-
 @layer utilities {
-    .bg-hero-overlay {
-        background-image:
-            linear-gradient(rgba(36, 42, 46, 0.8),
-                rgba(36, 42, 46, 0.8)),
-            url("/bg.jpg");
-    }
+  .bg-hero-overlay {
+    background-image:
+      linear-gradient(rgba(36, 42, 46, 0.8), rgba(36, 42, 46, 0.8)),
+      url("/bg.jpg");
+  }
 }
