@@ -1,19 +1,38 @@
+import { NavLink } from "react-router";
 import Logo from "./Logo";
 
 function AppNav() {
   return (
     <nav className="flex items-center justify-between ">
-      <Logo />
+      <NavLink to={"/"}>
+        <Logo />
+      </NavLink>
 
       <ul className="flex flex-row items-center justify-center gap-16">
         <li>
-          <a className="navLink">pricing</a>
+          <NavLink
+            to={"/pricing"}
+            className={({ isActive }) =>
+              `navLink ${isActive ? "text-[var(--color-brand--2)]" : "text-[var(--color-light--2)]"}`
+            }
+          >
+            pricing
+          </NavLink>
         </li>
         <li>
-          <a className="navLink">product</a>
+          <NavLink
+            to={"/product"}
+            className={({ isActive }) =>
+              `navLink ${isActive ? "text-[var(--color-brand--2)]" : "text-[var(--color-light--2)]"}`
+            }
+          >
+            product
+          </NavLink>
         </li>
         <li>
-          <a className="ctaLink">Login</a>
+          <NavLink to={"/login"} className="ctaLink">
+            Login
+          </NavLink>
         </li>
       </ul>
     </nav>
