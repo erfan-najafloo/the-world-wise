@@ -4,16 +4,14 @@ import Logo from "./Logo";
 function PageNav() {
   return (
     <nav className="flex items-center justify-between ">
-      <NavLink to={"/"}>
-        <Logo />
-      </NavLink>
+      <Logo />
 
-      <ul className="flex flex-row items-center justify-center gap-16">
+      <ul className="flex items-center list-none justify-center gap-16">
         <li>
           <NavLink
             to={"/pricing"}
             className={({ isActive }) =>
-              `navLink ${isActive ? "text-[var(--color-brand--2)]" : "text-[var(--color-light--2)]"}`
+              `pageNavLink ${isActive ? "text-[var(--color-brand--2)]" : "text-[var(--color-light--2)]"}`
             }
           >
             pricing
@@ -23,7 +21,7 @@ function PageNav() {
           <NavLink
             to={"/product"}
             className={({ isActive }) =>
-              `navLink ${isActive ? "text-[var(--color-brand--2)]" : "text-[var(--color-light--2)]"}`
+              `pageNavLink ${isActive ? "text-[var(--color-brand--2)]" : "text-[var(--color-light--2)]"}`
             }
           >
             product
