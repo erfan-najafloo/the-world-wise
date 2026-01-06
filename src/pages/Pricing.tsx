@@ -1,9 +1,9 @@
-import AppNav from "../components/AppNav";
+import PageNav from "../components/PageNav";
 
 function Pricing() {
   return (
     <main className="m-10 py-10 px-20 bg-[var(--color-dark--1)] min-h-[calc(100vh-5rem)]">
-      <AppNav />
+      <PageNav />
       <section className="grid grid-cols-2 gap-28 items-center w-[clamp(80rem,80%,90rem)] my-24 mx-auto">
         <div>
           <h2 className="text-6xl leading-[1.2] mb-12">

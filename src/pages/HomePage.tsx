@@ -1,9 +1,10 @@
-import AppNav from "../components/AppNav";
+import { NavLink } from "react-router";
+import PageNav from "../components/PageNav";
 
 function HomePage() {
   return (
     <main className="h-[calc(100vh-5rem)] bg-hero-overlay bg-cover bg-center m-10 py-10 px-20 ">
-      <AppNav />
+      <PageNav />
       <section className="flex flex-col h-[85%] items-center justify-center gap-10 text-center">
         <h1 className="text-7xl leading-[1.3]">
           You travel the world.
@@ -18,7 +19,9 @@ function HomePage() {
           of. Never forget your wonderful experiences, and show your friends how
           you have wandered the world.
         </h2>
-        <a className="cta">start tracking now</a>
+        <NavLink to={"/app"} className="cta">
+          start tracking now
+        </NavLink>
       </section>
     </main>
   );

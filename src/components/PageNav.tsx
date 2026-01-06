@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import Logo from "./Logo";
 
-function AppNav() {
+function PageNav() {
   return (
     <nav className="flex items-center justify-between ">
       <NavLink to={"/"}>
@@ -39,4 +39,4 @@ function AppNav() {
   );
 }
 
-export default AppNav;
+export default PageNav;
